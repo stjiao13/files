@@ -194,3 +194,4 @@ public void delete(int index){
     get比较容易，就是从head traverse，定位第index个char；insert有点麻烦，有几种情况需要考虑。
     时间有点不太够，所以insert函数没完全实现 T.T
 <K> 第一个是设计一个fixed size cache的数据结构。（这句话不知所云）
+<L> insert方法写的时候并不是添加的时候node满了就直接新加一个node然后移动一个elements到新的node就好了，更好的方法是移动一半的elements从满的node到新的node。是类似B+tree的那种思路。. 
