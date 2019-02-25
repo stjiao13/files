@@ -7,6 +7,9 @@ of them appears at least k times in these streams. Duplicate numbers in a stream
 should be counted as once.
 
 Note: In the interview, we should use min heap method
+
+
+
 /* =============================================================================
 code
 =============================================================================*/

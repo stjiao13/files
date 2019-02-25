@@ -4,6 +4,13 @@ Question Description
 Given a tree,(binary tree possibily) every tree edge has a cost， find the least
 cost or find the leaf node that the cost of path that from root to leaf is the
 least.
+
+
+// Dijikstra 与topological sort的trade off
+// D:Time ((V + E)log V)
+// toposort: V + E
+
+
 /* =============================================================================
 code
 =============================================================================*/

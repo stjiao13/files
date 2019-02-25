@@ -1,14 +1,23 @@
 /* =============================================================================
 Question Description
 =============================================================================*/
-Given a rawTitle, and a list(or array) of clean titles. For each clean title,
-the raw title can get a "match point". For example, if raw title is "senior software
-engineer" and clean titles are "software engineer" and "mechanical engineer", the
-"match point" will be 2 and 1. In this case we return "software engineer" because
-it has higher "match point".
+//Given a rawTitle, and a list(or array) of clean titles. For each clean title,
+//the raw title can get a "match point". For example, if raw title is "senior software
+//engineer" and clean titles are "software engineer" and "mechanical engineer", the
+//"match point" will be 2 and 1. In this case we return "software engineer" because
+//it has higher "match point".
 /* =============================================================================
 code
 =============================================================================*/
+方法应该是inveerted index
+
+//我是用Map存，key: document ID, value: word。这种解法只能过14/20。
+// 想要全部都过的话需要用key: word, value: document ID。
+// 据说Indeed上机题是一阵一阵的，可能今年下半年的上机题全是这个。
+//https://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=450098&extra=&page=1
+
+
+
 public class Normalized_Title {
     public String getHighestTitle(String rawTitle, String[] cleanTitles){
         String res = "";

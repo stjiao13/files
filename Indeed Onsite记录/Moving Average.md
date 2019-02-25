@@ -9,6 +9,18 @@ Question Description
 /* =============================================================================
 code
 =============================================================================*/
+
+//感觉就是这一轮跪的，被阿三黑了......一开始很简单秒了，然后要求getMedian()，提出可以quickSelect或者两个heap，
+// 他想要两个heap的解法，问了怎么实现，没有写代码因为时间不够，最后问到了heap的细节，删除是如何实现的，
+// 因为需要删掉expired event，时间复杂度是多少。还要问amortized time complexity。这个阿三真的是问了一堆time complexity。
+//https://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=450098&extra=&page=1
+
+注意quick select如何写（get medium的情形）
+优化：
+合并同一时间
+单独的expire函数，called when record and get
+multithreading for expire function
+
 public class Moving_Average {
     private Queue<Event> queue = new LinkedList<>();
     private int sum = 0;

@@ -1,13 +1,26 @@
 /* =============================================================================
 Question
 =============================================================================*/
-Given a LinkedList, every node contains a array. Every element of the array is char
-implement two functions
-1. get(int index) find the char at the index
-2. insert(char ch, int index) insert the char to the index
+//Given a LinkedList, every node contains a array. Every element of the array is char
+//implement two functions
+//1. get(int index) find the char at the index
+//2. insert(char ch, int index) insert the char to the index
 /* =============================================================================
 code思路
 =============================================================================*/
+
+注意各种edge case，还有联系B+ tree，需要再看一看
+
+
+//先讨论各种corner case，讨论好了之后才让写代码。先写get()，
+被指出了一个小bug，curr = curr.next应该在update size之后。然后写insert()。整体很顺利。
+//https://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=450098&extra=&page=1
+
+
+
+
+
+
 class Node{
     char[] chars = new char[5]; //定长5,反正总要有定长。
     int len; //表示数组里面实际有几个字母

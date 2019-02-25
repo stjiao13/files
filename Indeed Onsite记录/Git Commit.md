@@ -6,6 +6,9 @@ that we have.
 /* =============================================================================
 code
 =============================================================================*/
+
+
+
 class GitNode{
     int id;
     List<GitNode> parents;
@@ -14,6 +17,20 @@ class GitNode{
         this.parents = new ArrayList<>();
     }
 }
+
+找lca问题：
+1. 遍历一个node的所有parent，建立map （parent - dist），对另一个node进行bfs，不断update最近的parent，
+优化：当第二个node的distance greater than min distance found so far, we know there is no better solution and stop
+2. 类似于1，进行双向bfs，
+eg：dist =  1，对node1 ，node 2 进行bfs
+    dist = 2，对node1，node 2 进行bfs
+    dist = 3，对node1，node2进行bfs
+    比较复杂
+    
+ pros ： if node1 has many parents and the bfs process may take a long time
+ 
+ cons: kind of complicated
+ 
 public class Git_Commit {
     //其实是找到了所有的parents,所以假设拿到的是最新的gitNode
     //只有这种难度，才能大部分人都秒做吧。

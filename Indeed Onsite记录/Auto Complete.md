@@ -6,6 +6,37 @@ Find all auto-complete word for the given prefix string
 /* =============================================================================
 code
 =============================================================================*/
+
+## 1. We could also use binary search method, use more place, cost more time, good if the data
+## size is rather small
+## Besides, we could also build  a binary search tree, then our task is to search string s such that s>= prefix and 
+s< the next greater char than prefix with same length
+eg: prefix = "abc" => "abc" <= s < "abd"
+    prefix = "abz" => "abz" <= s < "ac"
+    prefix = "z" => "z" <= s
+
+    
+## 2. Or we could use a map where key is all valid prefix and val is corresponding string or string index
+
+## pratically soring all prefix may be hard, we could just store some prefix in an array ant thus it is faster than hashmap
+
+## eg: we store the first three chars :
+map first three chars to an integer: "abc" => 1(a) * 26^2 + 2(b) * 26 + 3(c)
+"a" => 1(a)
+
+1-26: a-z
+
+excel column title 
+
+List<Integer>[] map : val is the index of the string
+
+1 milllion words
+
+1 million / 26^3 = 57 strings per item , in facr could be larger
+
+"un" "a" "in"
+
+
 class TrieNode{
     boolean hasWord;
     TrieNode[] children;

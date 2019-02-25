@@ -8,6 +8,13 @@ Implement two functions,
 /* =============================================================================
 code
 =============================================================================*/
+
+
+两种做法:
+
+1. hash-based : bloom filter
+2. interval based:
+
 //好像写的不太好，如果expire，就可以丢了，不需要继续存在map里面
 //所以可以改成map remove expire jobid，但这样就不用map了，用个set就行。
 //这也太容易了。
@@ -88,3 +95,7 @@ Follow Up code
 http://www.cnblogs.com/heaad/archive/2011/01/02/1924195.html
 下面这个博客里面的一些思想可以借鉴。
 http://www.drfish.me/大数据/2015/12/07/大数据常用技巧之位图法/
+
+
+
+//也可能是吋interval
